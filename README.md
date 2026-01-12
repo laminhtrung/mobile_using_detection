@@ -144,6 +144,7 @@ python3 analysis/analysis.py \
 The `utils/` folder contains small helpers for dataset preparation (splitting, converting CSV→YOLO, cropping, visualization, etc.).
 
 - `utils/download_data.py` downloads a dataset via `kagglehub` (requires Kaggle credentials and will copy into this repo).
+  /root/trunglm8/mobile_phone_detection/runs/test/test_24_6/val_batch0_labels.jpg
 
 ## Notes
 
