@@ -151,3 +151,8 @@ The `utils/` folder contains small helpers for dataset preparation (splitting, c
 - Several `.sh` scripts (and some defaults in `.py`) use hardcoded absolute paths; treat them as examples and adjust paths for your machine.
 - `pipeline_test_rtsp.sh` references `pipeline_phone_use.py` (not present); use `pipeline_test.py` instead.
 - Pretrained `.pt` weights are present in the repo root (e.g. `yolo11n.pt`, `yolov9m.pt`) for convenience.
+
+## 📷 Demo
+
+![Demo detection](./val_batch1_labels.jpg)
+
