@@ -151,9 +151,10 @@ The `utils/` folder contains small helpers for dataset preparation (splitting, c
 - `pipeline_test_rtsp.sh` references `pipeline_phone_use.py` (not present); use `pipeline_test.py` instead.
 - Pretrained `.pt` weights are present in the repo root (e.g. `yolo11n.pt`, `yolov9m.pt`) for convenience.
 
-## 📷 Demo
-
-![Demo detection](val_batch1_pred.jpg)
-![Demo detection](val_batch2_pred.jpg)
+## 📊 Validation Results
+<p align="center">
+  <img src="images/val_batch1_pred.jpg" width="48%">
+  <img src="images/val_batch2_pred.jpg" width="48%">
+</p>
 
 
