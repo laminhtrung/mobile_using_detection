@@ -1,0 +1,40 @@
+# YOLO Hyperparameters
+
+# Optimizer
+lr0: 0.01     # initial learning rate
+lrf: 0.01           # final OneCycleLR learning rate (lr0 * lrf)
+momentum: 0.937     # SGD momentum/Adam beta1
+weight_decay: 0.0005  # optimizer weight decay
+
+# Warmup
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+
+# Loss gains
+box: 7.5            # box loss gain
+cls: 0.5            # cls loss gain
+dfl: 1.5            # dfl loss gain
+pose: 12.0          # pose loss gain (nếu không dùng pose detection có thể bỏ)
+kobj: 1.0           # objectness loss gain
+
+# Augmentation
+hsv_h: 0.015        # image HSV-Hue augmentation (fraction)
+hsv_s: 0.7          # image HSV-Saturation augmentation (fraction)
+hsv_v: 0.4          # image HSV-Value augmentation (fraction)
+degrees: 2.0        # rotation (+/- deg)
+translate: 0.05     # translation (+/- fraction)
+scale: 0.2          # image scale (+/- gain)
+shear: 2.0          # image shear (+/- deg)
+perspective: 0.0    # perspective (+/- fraction)
+flipud: 0.0         # flip up-down (probability)
+fliplr: 0.5         # flip left-right (probability)
+bgr: 0.0            # channel swap (probability)
+
+mosaic: 0.8         # mosaic augmentation probability
+mixup: 0.1          # mixup augmentation probability
+cutmix: 0.0         # cutmix augmentation probability
+copy_paste: 0.0     # copy-paste augmentation probability
+copy_paste_mode: flip
+auto_augment: randaugment
+erasing: 0.4        # random erasing probability

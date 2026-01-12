@@ -1,0 +1,22 @@
+# Core
+# NOTE: YOLO11 weights require a reasonably recent Ultralytics release.
+ultralytics>=8.0.0
+numpy>=1.23
+opencv-python>=4.7
+Pillow>=9.0
+tqdm>=4.64
+PyYAML>=6.0
+
+# Dataset analysis utilities
+pandas>=1.5
+matplotlib>=3.7
+
+# Web demo (webapp.py)
+fastapi>=0.100
+uvicorn>=0.22
+jinja2>=3.1
+python-multipart>=0.0.6
+
+# Optional: download dataset via KaggleHub (utils/download_data.py)
+kagglehub>=0.2.0
+
