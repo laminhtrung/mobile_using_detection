@@ -153,5 +153,5 @@ The `utils/` folder contains small helpers for dataset preparation (splitting, c
 
 ## 📷 Demo
 
-![Demo detection](val_batch1_labels.jpg)
+![Demo detection](val_batch1_pred.jpg)
 
