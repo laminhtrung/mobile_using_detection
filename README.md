@@ -72,11 +72,13 @@ python3 prediction.py \
 
 Pipeline overview:
 
-flowchart LR
-  A[Image / Video] --> B[Person Detection]
-  B --> C[Crop Persons]
-  C --> D[Phone Detection]
-  D --> E[Results]
+flowchart TD
+  A[Input<br/>(Image / Video / RTSP)]
+  A --> B[Detect People]
+  B --> C[Crop Person Regions]
+  C --> D[Detect Phone Usage]
+  D --> E[Output Results]
+
 
 
 Image mode:
