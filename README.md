@@ -70,6 +70,16 @@ python3 prediction.py \
 
 `pipeline_test.py` supports `--mode image` and `--mode video` and produces annotated outputs (and optionally crops/JSON/YOLO labels).
 
+Pipeline overview:
+
+```mermaid
+flowchart LR
+  A[Input image/video] --> B[Person detector<br/>YOLOv9m/v9c]
+  B --> C[Crop person regions]
+  C --> D[Phone-usage detector]
+  D --> E[Outputs: boxes, crops, labels, JSON, video]
+```
+
 Image mode:
 
 ```bash
