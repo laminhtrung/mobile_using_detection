@@ -5,6 +5,7 @@ End-to-end scripts for training, evaluating, and running inference for **mobile 
 - Training (`train.py`) and test-set evaluation (`test.py`)
 - Batch image inference + YOLO-label export (`prediction.py`)
 - 2-stage pipeline: **person detector → crop → phone-usage detector** (`pipeline_test.py`)
+- Export Ultralytics `.pt` → ONNX (`convert.py`, `convert.sh`)
 - Dataset analysis utilities (`analysis/analysis.py`)
 - Simple FastAPI demo (`webapp.py`)
 
@@ -113,6 +114,24 @@ python3 pipeline_test.py \
   --outdir ./runs/video
 ```
 
+## Export .pt → ONNX
+
+Convert an Ultralytics YOLO `.pt` model (e.g. `yolov9m.pt`) to `.onnx`:
+
+```bash
+python3 convert.py --weights yolov9m.pt --imgsz 640 --opset 17 --output ./yolov9m.onnx
+```
+
+Or via the wrapper script:
+
+```bash
+bash convert.sh --weights yolov9m.pt --imgsz 640 --opset 17 --output ./yolov9m.onnx
+```
+
+Notes:
+- `convert.py` writes Ultralytics settings under `.ultralytics/` in this repo (useful for restricted/sandboxed environments).
+- Add `--dynamic` for dynamic input shapes, or `--simplify` if you have `onnxsim` installed.
+
 ## Web demo (FastAPI)
 
 `webapp.py` is a small upload-and-infer demo that renders results via `templates/index.html`.
@@ -159,4 +178,3 @@ The `utils/` folder contains small helpers for dataset preparation (splitting, c
     <td><img src="val_batch2_pred.jpg" alt="Demo detection 2" width="100%"></td>
   </tr>
 </table>
-

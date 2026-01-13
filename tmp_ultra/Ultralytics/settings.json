@@ -1,0 +1,21 @@
+{
+  "settings_version": "0.0.6",
+  "datasets_dir": "/root/trunglm8/mobile_phone_detection/datasets",
+  "weights_dir": "weights",
+  "runs_dir": "runs",
+  "uuid": "cf0f91642a80e16fcfcd719ca138213bbd40c6f48e845187b7cfbdad7afcb698",
+  "sync": true,
+  "api_key": "",
+  "openai_api_key": "",
+  "clearml": true,
+  "comet": true,
+  "dvc": true,
+  "hub": true,
+  "mlflow": true,
+  "neptune": true,
+  "raytune": true,
+  "tensorboard": false,
+  "wandb": false,
+  "vscode_msg": true,
+  "openvino_msg": true
+}
