@@ -147,19 +147,6 @@ Notes:
 - `convert.py` writes Ultralytics settings under `.ultralytics/` in this repo (useful for restricted/sandboxed environments).
 - Add `--dynamic` for dynamic input shapes, or `--simplify` if you have `onnxsim` installed.
 
-## Web demo (FastAPI)
-
-`webapp.py` is a small upload-and-infer demo that renders results via `templates/index.html`.
-
-1) Update the weights path used by the app:
-   - `webapp.py` currently uses `DEFAULT_WEIGHTS = Path(".../best.pt")` with an **absolute path**.
-2) Run:
-
-```bash
-uvicorn webapp:app --host 0.0.0.0 --port 8000
-```
-
-Then open `http://localhost:8000`.
 
 ## Dataset analysis
 
