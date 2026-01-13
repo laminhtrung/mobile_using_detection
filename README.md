@@ -72,13 +72,12 @@ python3 prediction.py \
 
 Pipeline overview:
 
-```mermaid
 flowchart LR
-  A[Input image/video] --> B[Person detector<br/>YOLOv9m/v9c]
-  B --> C[Crop person regions]
-  C --> D[Phone-usage detector]
-  D --> E[Outputs: boxes, crops, labels, JSON, video]
-```
+  A[Image / Video] --> B[Person Detection]
+  B --> C[Crop Persons]
+  C --> D[Phone Detection]
+  D --> E[Results]
+
 
 Image mode:
 
