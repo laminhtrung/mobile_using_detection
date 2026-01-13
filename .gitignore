@@ -17,3 +17,6 @@ yolov8s.pt
 yolov8x.pt
 yolov9c.pt
 yolov9m.pt
+*.pt
+*.onnx
+Result/weights/
