@@ -78,6 +78,9 @@ flowchart TD
   B -.-> C[Crop per-person regions]
   C -.-> D["Stage 2: Phone-usage detector"]
   D -.-> E["Outputs: boxes, crops, labels, JSON, video"]
+
+  classDef bw fill:#ffffff,stroke:#000000,color:#000000;
+  class A,B,C,D,E bw;
 ```
 
 
