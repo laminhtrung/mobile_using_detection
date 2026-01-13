@@ -74,10 +74,10 @@ Pipeline overview:
 
 ```mermaid
 flowchart TD
-  A["Input<br/>Image / Video / RTSP"] --> B["Stage 1: Person detector<br/>YOLOv9m/v9c"]
-  B --> C[Crop per-person regions]
-  C --> D["Stage 2: Phone-usage detector"]
-  D --> E["Outputs: boxes, crops, labels, JSON, video"]
+  A["Input<br/>Image / Video / RTSP"] -.-> B["Stage 1: Person detector<br/>YOLOv9m/v9c"]
+  B -.-> C[Crop per-person regions]
+  C -.-> D["Stage 2: Phone-usage detector"]
+  D -.-> E["Outputs: boxes, crops, labels, JSON, video"]
 ```
 
 
