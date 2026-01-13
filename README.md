@@ -5,7 +5,7 @@ End-to-end scripts for training, evaluating, and running inference for **mobile 
 - Training (`train.py`) and test-set evaluation (`test.py`)
 - Batch image inference + YOLO-label export (`prediction.py`)
 - 2-stage pipeline: **person detector → crop → phone-usage detector** (`pipeline_test.py`)
-- Export Ultralytics `.pt` → ONNX (`convert.py`, `convert.sh`)
+- Export Ultralytics `.pt` → ONNX (`convert.py`, `scripts/convert.sh`)
 - Dataset analysis utilities (`analysis/analysis.py`)
 - Simple FastAPI demo (`webapp.py`)
 
@@ -125,7 +125,7 @@ python3 convert.py --weights yolov9m.pt --imgsz 640 --opset 17 --output ./yolov9
 Or via the wrapper script:
 
 ```bash
-bash convert.sh --weights yolov9m.pt --imgsz 640 --opset 17 --output ./yolov9m.onnx
+bash scripts/convert.sh --weights yolov9m.pt --imgsz 640 --opset 17 --output ./yolov9m.onnx
 ```
 
 Notes:
@@ -167,7 +167,7 @@ The `utils/` folder contains small helpers for dataset preparation (splitting, c
 ## Notes
 
 - Several `.sh` scripts (and some defaults in `.py`) use hardcoded absolute paths; treat them as examples and adjust paths for your machine.
-- `pipeline_test_rtsp.sh` references `pipeline_phone_use.py` (not present); use `pipeline_test.py` instead.
+- `scripts/pipeline_test_rtsp.sh` references `pipeline_phone_use.py` (not present); use `pipeline_test.py` instead.
 - Pretrained `.pt` weights are present in the repo root (e.g. `yolo11n.pt`, `yolov9m.pt`) for convenience.
 
 ## Demo
