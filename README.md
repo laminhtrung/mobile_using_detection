@@ -166,6 +166,10 @@ The `utils/` folder contains small helpers for dataset preparation (splitting, c
 
 - `utils/download_data.py` downloads a dataset via `kagglehub` (requires Kaggle credentials and will copy into this repo).
 
+## Model Zoo
+
+See `MODEL_ZOO.md` for available weights, metrics, and export links.
+
 ## Notes
 
 - Several `.sh` scripts (and some defaults in `.py`) use hardcoded absolute paths; treat them as examples and adjust paths for your machine.
